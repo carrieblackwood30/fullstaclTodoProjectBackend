@@ -14,10 +14,6 @@ const todos = []
 const data = fs.readFileSync("./data-base.json", { encoding: 'utf8' })
 const dataParse = JSON.parse(data)
 
-app.get("/", (req, res) => {
-    res.json(dataParse)
-})
-
 app.get("/todos", (req, res) => {
     res.json(dataParse)
 })
